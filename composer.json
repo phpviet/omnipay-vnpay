@@ -1,0 +1,50 @@
+{
+    "name": "phpviet/omnipay-vnpay",
+    "type": "library",
+    "description": "Thư viện hổ trợ tích hợp cổng thanh toán VNPay.",
+    "keywords": [
+        "phpviet",
+        "vnpay",
+        "payment",
+        "vietnam-payment",
+        "payment-gateway",
+        "vietnam-payment-gateway"
+    ],
+    "homepage": "https://github.com/phpviet/omnipay-vnpay",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vuong Xuong Minh",
+            "email": "vuongxuongminh@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "omnipay/common": "^3.0"
+    },
+    "require-dev": {
+        "omnipay/tests": "^3.0",
+        "scrutinizer/ocular": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Omnipay\\VNPay\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omnipay\\VNPay\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "\"vendor/bin/phpunit\""
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+	}
+}
