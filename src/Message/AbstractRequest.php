@@ -33,6 +33,9 @@ abstract class AbstractRequest extends BaseAbstractRequest
         $this->setVnpIpAddr(
             $this->getVnpIpAddr() ?? $this->httpRequest->getClientIp()
         );
+        $this->setVnpCreateDate(
+            $this->getVnpCreateDate() ?? date('Ymdhis')
+        );
 
         return $this;
     }
@@ -93,6 +96,7 @@ abstract class AbstractRequest extends BaseAbstractRequest
 
     /**
      * Thiết lập thời gian khởi tạo truy vấn đến VNPay.
+     * Mặc định sẽ là thời gian hiện tại.
      *
      * @param  null|string  $date
      * @return $this
