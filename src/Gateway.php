@@ -26,6 +26,14 @@ class Gateway extends AbstractGateway
     /**
      * {@inheritdoc}
      */
+    public function getName(): string
+    {
+        return 'VNPay';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function initialize(array $parameters = [])
     {
         return parent::initialize(
