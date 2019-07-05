@@ -23,7 +23,6 @@ class SignatureResponseTest extends TestCase
             'example' => 'value',
             'foo' => 'bar',
         ]);
-
         $this->assertEquals(['example' => 'value', 'foo' => 'bar'], $response->getData());
     }
 
@@ -45,7 +44,6 @@ class SignatureResponseTest extends TestCase
             'vnp_SecureHash' => '32c2be7c9a4282ca13ce4a5e443902fe',
             'vnp_SecureHashType' => 'md5',
         ]);
-
         $this->assertFalse($response->isPending());
         $this->assertTrue($response->isSuccessful());
         $this->assertFalse($response->isRedirect());
@@ -53,5 +51,4 @@ class SignatureResponseTest extends TestCase
         $this->assertEquals('12996460', $response->getTransactionReference());
         $this->assertEquals('00', $response->getCode());
     }
-
 }

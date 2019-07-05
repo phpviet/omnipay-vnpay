@@ -33,7 +33,6 @@ class PurchaseResponseTest extends TestCase
         $response = new PurchaseResponse($this->getMockRequest(), [
             'vnp_TxnRef' => 123,
         ], 'john doe');
-
         $this->assertFalse($response->isPending());
         $this->assertFalse($response->isSuccessful());
         $this->assertTrue($response->isRedirect());
@@ -42,5 +41,4 @@ class PurchaseResponseTest extends TestCase
         $this->assertEquals('123', $response->vnp_TxnRef);
         $this->assertEquals('123', $response->vnpTxnRef);
     }
-
 }

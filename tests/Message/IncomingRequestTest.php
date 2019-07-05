@@ -60,5 +60,4 @@ class IncomingRequestTest extends TestCase
         $this->assertEquals(11, $data['vnp_SecureHash']);
         $this->assertEquals(12, $data['vnp_SecureHashType']);
     }
-    
 }
