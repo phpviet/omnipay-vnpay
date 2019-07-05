@@ -152,8 +152,8 @@ $response = $gateway->refund([
 
 if ($response->isSuccessful()) {
     // TODO: xử lý kết quả và hiển thị.
-    print $response->amount;
-    print $response->orderId;
+    print $response->getTransactionId();
+    print $response->getTransactionReference();
     
     var_dump($response->getData()); // toàn bộ data do VNPay gửi về.
     
