@@ -49,7 +49,7 @@ abstract class AbstractSignatureRequest extends AbstractRequest
         call_user_func_array(
             [$this, 'validate'],
             $this->getSignatureParameters()
-        );;
+        );
 
         $parameters = $this->getParameters();
         $parameters['vnp_SecureHash'] = $this->generateSignature(

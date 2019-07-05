@@ -11,8 +11,8 @@ namespace Omnipay\VNPay\Tests;
 use Omnipay\Omnipay;
 use Omnipay\Tests\GatewayTestCase;
 use Omnipay\VNPay\Message\PurchaseResponse;
-use Omnipay\Common\Message\RedirectResponseInterface;
 use Omnipay\Common\Exception\InvalidRequestException;
+use Omnipay\Common\Message\RedirectResponseInterface;
 use Omnipay\Common\Exception\InvalidResponseException;
 
 /**

@@ -57,7 +57,7 @@ trait Parameters
     }
 
     /**
-     * Get the value of the hashSecret parameter
+     * Trả về khóa dùng để tạo chữ ký dữ liệu.
      *
      * @return null|string
      */
@@ -67,7 +67,7 @@ trait Parameters
     }
 
     /**
-     * Set the value of the hashSecret parameter
+     * Thiết lập khóa dùng để tạo chữ ký dữ liệu.
      *
      * @param  null|string  $secret
      *
