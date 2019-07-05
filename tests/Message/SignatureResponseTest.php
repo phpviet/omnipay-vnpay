@@ -53,4 +53,5 @@ class SignatureResponseTest extends TestCase
         $this->assertEquals('12996460', $response->getTransactionReference());
         $this->assertEquals('00', $response->getCode());
     }
+
 }

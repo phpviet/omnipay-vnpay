@@ -70,4 +70,5 @@ class RefundRequestTest extends TestCase
         $this->assertTrue(isset($data['vnp_SecureHash']));
         $this->assertFalse(isset($data['vnp_HashSecret']));
     }
+
 }

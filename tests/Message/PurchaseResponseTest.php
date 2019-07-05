@@ -42,4 +42,5 @@ class PurchaseResponseTest extends TestCase
         $this->assertEquals('123', $response->vnp_TxnRef);
         $this->assertEquals('123', $response->vnpTxnRef);
     }
+
 }
