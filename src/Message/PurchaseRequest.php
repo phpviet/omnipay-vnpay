@@ -38,9 +38,6 @@ class PurchaseRequest extends AbstractSignatureRequest
         $this->setVnpCurrCode(
             $this->getVnpCurrCode() ?? 'VND'
         );
-        $this->setVnpIpAddr(
-            $this->getVnpIpAddr() ?? $this->httpRequest->getClientIp()
-        );
 
         return $this;
     }
