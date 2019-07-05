@@ -36,7 +36,7 @@ class Signature
      * @param  string  $hashType
      * @throws InvalidArgumentException
      */
-    public function __construct(string $hashSecret, string $hashType = 'sha256')
+    public function __construct(string $hashSecret, string $hashType = 'md5')
     {
         if (! $this->isSupportHashType($hashType)) {
             throw new InvalidArgumentException(sprintf('Hash type: `%s` is not supported by VNPay', $hashType));
@@ -57,9 +57,7 @@ class Signature
         ksort($data);
         $dataSign = $this->hashSecret.urldecode(http_build_query($data));
 
-        return strtoupper(
-            hash($this->hashType, $dataSign)
-        );
+        return hash($this->hashType, $dataSign);
     }
 
     /**
