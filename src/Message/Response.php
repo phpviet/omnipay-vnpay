@@ -16,6 +16,8 @@ use Omnipay\Common\Message\AbstractResponse;
  */
 class Response extends AbstractResponse
 {
+    use Concerns\ResponseProperties;
+
     /**
      * {@inheritdoc}
      */

@@ -141,7 +141,7 @@ class RefundRequest extends AbstractSignatureRequest
     {
         return [
             'vnp_Version', 'vnp_Command', 'vnp_TmnCode', 'vnp_TxnRef', 'vnp_OrderInfo', 'vnp_Amount',
-            'vnp_TransDate', 'vnp_TransactionType',
+            'vnp_TransDate', 'vnp_TransactionType'
         ];
     }
 }

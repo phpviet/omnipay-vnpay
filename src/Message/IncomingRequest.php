@@ -8,12 +8,19 @@
 
 namespace Omnipay\VNPay\Message;
 
+use Omnipay\VNPay\Concerns\Parameters;
+use Omnipay\Common\Message\AbstractRequest;
+use Omnipay\VNPay\Concerns\ParametersNormalization;
+
 /**
  * @author Vuong Minh <vuongxuongminh@gmail.com>
  * @since 1.0.0
  */
 class IncomingRequest extends AbstractRequest
 {
+    use Parameters;
+    use ParametersNormalization;
+
     /**
      * {@inheritdoc}
      */
@@ -41,7 +48,9 @@ class IncomingRequest extends AbstractRequest
      */
     public function initialize(array $parameters = [])
     {
-        parent::initialize($parameters);
+        parent::initialize(
+            $this->normalizeParameters($parameters)
+        );
 
         foreach ($this->getIncomingParameters() as $parameter => $value) {
             $this->setParameter($parameter, $value);

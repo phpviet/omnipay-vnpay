@@ -1,0 +1,7 @@
+HTTP/1.1 200 OK
+Date: 05 Apr 2015 23:44:11 GMT
+Server: Apache
+Connection: close
+Content-Type: text/plain; charset=utf-8
+
+vnp_Amount=1000000&vnp_Message=QueryDR+Success&vnp_OrderInfo=1562314234&vnp_PayDate=20190705151100&vnp_ResponseCode=00&vnp_TmnCode=COCOSIN&vnp_TransactionNo=496558&vnp_TransactionStatus=01&vnp_TxnRef=1562314234&vnp_SecureHash=8c3f728cef087916f1f7f2995106ec27

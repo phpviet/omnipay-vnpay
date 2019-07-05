@@ -50,7 +50,7 @@ class PurchaseRequest extends AbstractSignatureRequest
      */
     public function sendData($data): PurchaseResponse
     {
-        $query = http_build_query($data, null, '&', PHP_QUERY_RFC3986);
+        $query = http_build_query($data);
         $redirectUrl = $this->getEndpoint().'?'.$query;
 
         return $this->response = new PurchaseResponse($this, $data, $redirectUrl);

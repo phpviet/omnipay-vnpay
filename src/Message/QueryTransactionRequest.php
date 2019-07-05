@@ -53,8 +53,10 @@ class QueryTransactionRequest extends AbstractSignatureRequest
 
     /**
      * Trả về mã giao dịch của VNPay.
+     * Đây là phương thức ánh xạ của [[getTransactionReference()]].
      *
      * @return null|string
+     * @see getTransactionReference
      */
     public function getVnpTransactionNo(): ?string
     {
@@ -63,13 +65,31 @@ class QueryTransactionRequest extends AbstractSignatureRequest
 
     /**
      * Thiết lập mã giao dịch của VNPay.
+     * Đây là phương thức ánh xạ của [[setTransactionReference()]].
      *
      * @param  null|string  $no
      * @return $this
+     * @see setTransactionReference
      */
     public function setVnpTransactionNo(?string $no)
     {
         return $this->setParameter('vnp_TransactionNo', $no);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getTransactionReference(): ?string
+    {
+        return $this->getParameter('vnp_TransactionNo');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setTransactionReference($value)
+    {
+        return $this->setParameter('vnp_TransactionNo', $value);
     }
 
     /**

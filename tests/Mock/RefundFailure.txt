@@ -1,0 +1,7 @@
+HTTP/1.1 200 OK
+Date: 05 Apr 2015 23:44:11 GMT
+Server: Apache
+Connection: close
+Content-Type: text/plain; charset=utf-8
+
+vnp_ResponseCode=99&vnp_Message=Parameter+required

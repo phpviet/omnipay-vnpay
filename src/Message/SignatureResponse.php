@@ -24,8 +24,10 @@ class SignatureResponse extends Response
      */
     public function __construct(RequestInterface $request, $data)
     {
-        $this->validateSignature();
-
         parent::__construct($request, $data);
+
+        if ($this->isSuccessful()) {
+            $this->validateSignature();
+        }
     }
 }

@@ -25,18 +25,19 @@ trait ResponseSignatureValidation
     {
         $data = $this->getData();
 
-        if (! isset($data['vnp_SecureHash'], $data['vnp_SecureHashType'])) {
+        if (! isset($data['vnp_SecureHash'])) {
             throw new InvalidResponseException('Response from VNPay is invalid!');
         }
 
         $dataSignature = array_filter($this->getData(), function ($parameter) {
             return 0 === strpos($parameter, 'vnp_')
-                && ! in_array($parameter, ['vnp_SecureHash', 'vnp_SecureHashType']);
+                && 'vnp_SecureHash' !== $parameter
+                && 'vnp_SecureHashType' !== $parameter;
         }, ARRAY_FILTER_USE_KEY);
 
         $signature = new Signature(
             $this->getRequest()->getVnpHashSecret(),
-            $data['vnp_SecureHashType']
+            $data['vnp_SecureHashType'] ?? 'md5'
         );
 
         if (! $signature->validate($dataSignature, $data['vnp_SecureHash'])) {
