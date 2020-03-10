@@ -21,7 +21,7 @@ trait RequestSignature
      * @param  string  $hashType
      * @return string
      */
-    protected function generateSignature($hashType = 'md5'): string
+    protected function generateSignature(string $hashType = 'sha256'): string
     {
         $data = [];
         $signature = new Signature(

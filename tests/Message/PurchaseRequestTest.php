@@ -44,6 +44,7 @@ class PurchaseRequestTest extends TestCase
         $request->setVnpReturnUrl(10);
         $request->setVnpTxnRef(11);
         $request->setVnpVersion(12);
+        $request->setSecureHashType('sha256');
         $request->setTestMode(true);
         $data = $request->getData();
         $this->assertEquals(14, count($data));
@@ -70,6 +71,7 @@ class PurchaseRequestTest extends TestCase
         $this->assertEquals(10, $data['vnp_ReturnUrl']);
         $this->assertEquals(11, $data['vnp_TxnRef']);
         $this->assertEquals(12, $data['vnp_Version']);
+        $this->assertEquals('sha256', $data['vnp_SecureHashType']);
         $this->assertTrue(isset($data['vnp_SecureHash']));
         $this->assertFalse(isset($data['vnp_HashSecret']));
     }

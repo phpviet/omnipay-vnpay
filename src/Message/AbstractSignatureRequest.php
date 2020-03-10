@@ -53,7 +53,7 @@ abstract class AbstractSignatureRequest extends AbstractRequest
 
         $parameters = $this->getParameters();
         $parameters['vnp_SecureHash'] = $this->generateSignature(
-            $parameters['vnp_SecureHashType'] = 'md5'
+            $parameters['vnp_SecureHashType'] = $this->getSecureHashType() ?? 'sha256'
         );
 
         unset($parameters['vnp_HashSecret'], $parameters['testMode']);
@@ -188,5 +188,29 @@ abstract class AbstractSignatureRequest extends AbstractRequest
     public function setClientIp($value)
     {
         return $this->setParameter('vnp_IpAddr', $value);
+    }
+
+    /**
+     * Trả về phương thức mã hóa dùng để tạo chữ ký dự liệu (md5, sha256).
+     *
+     * @return null|string
+     * @since 1.0.1
+     */
+    public function getSecureHashType(): ?string
+    {
+        return $this->getParameter('vnp_SecureHashType');
+    }
+
+    /**
+     * Thiết lập phương thức mã hóa dùng để tạo chữ ký dự liệu.
+     *
+     * @param  null|string  $secureHashType
+     *
+     * @return $this
+     * @since 1.0.1
+     */
+    public function setSecureHashType(?string $secureHashType)
+    {
+        return $this->setParameter('vnp_SecureHashType', $secureHashType);
     }
 }
