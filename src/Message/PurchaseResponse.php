@@ -8,8 +8,8 @@
 
 namespace Omnipay\VNPay\Message;
 
-use Omnipay\Common\Message\RequestInterface;
 use Omnipay\Common\Message\RedirectResponseInterface;
+use Omnipay\Common\Message\RequestInterface;
 
 /**
  * @author Vuong Minh <vuongxuongminh@gmail.com>

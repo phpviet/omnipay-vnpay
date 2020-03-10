@@ -7,8 +7,8 @@
 
 namespace Omnipay\VNPay\Message\Concerns;
 
-use Omnipay\VNPay\Support\Signature;
 use Omnipay\Common\Exception\InvalidResponseException;
+use Omnipay\VNPay\Support\Signature;
 
 /**
  * @author Vuong Minh <vuongxuongminh@gmail.com>
