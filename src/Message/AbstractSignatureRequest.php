@@ -7,8 +7,8 @@
 
 namespace Omnipay\VNPay\Message;
 
-use Omnipay\VNPay\Concerns\Parameters;
 use Omnipay\Common\Message\AbstractRequest;
+use Omnipay\VNPay\Concerns\Parameters;
 use Omnipay\VNPay\Concerns\ParametersNormalization;
 
 /**

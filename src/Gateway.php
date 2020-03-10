@@ -9,10 +9,10 @@
 namespace Omnipay\VNPay;
 
 use Omnipay\Common\AbstractGateway;
-use Omnipay\VNPay\Message\RefundRequest;
 use Omnipay\VNPay\Message\IncomingRequest;
 use Omnipay\VNPay\Message\PurchaseRequest;
 use Omnipay\VNPay\Message\QueryTransactionRequest;
+use Omnipay\VNPay\Message\RefundRequest;
 
 /**
  * @author Vuong Minh <vuongxuongminh@gmail.com>
