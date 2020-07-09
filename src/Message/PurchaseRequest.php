@@ -134,7 +134,7 @@ class PurchaseRequest extends AbstractSignatureRequest
      * @param  null|string  $code
      * @return $this
      */
-    public function setBankCode(?string $code)
+    public function setVnpBankCode(?string $code)
     {
         return $this->setParameter('vnp_BankCode', $code);
     }
